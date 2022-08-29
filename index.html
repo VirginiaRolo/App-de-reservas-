@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+    <!-- El favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- Codigo JS -->
+    <script type="text/javascript" src="js/codigo.js"></script>
+    <title>Reservas</title>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <div id="fijadorMenuPrincipal">
+        <header>
+            <nav class="" id="menuPrincipal">
+                <a href="index.html"><img src="img/Reservas.svg" alt="Logo" /></a>
+                <div id="divMenuLogueoYRegistro">
+                    <ul>
+                        <li class="redondear" id="locales"><a href="#">Locales</a></li>
+                        <li class="redondear" id="personas"><a href="#">Personas</a></li>
+                    </ul>
+                </div>
+                <div id="divMenuCerrarSesion">
+                    <ul>
+                        <li id="imgLogOut"><a href="#" id="cerrarSesion"><img src="img/logout.svg" alt="Cerrar Sesión"></a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        <!-- Para arreglar flotacion CSS -->
+        <div class="clearfix"></div>
+        </header>
+    </div>
+
+    <!-- Menu Lateral -->
+    <!-- Solo se muestra cuando inicio sesion -->
+    <div class="sidebar">
+        <nav>
+            <!-- Solo se muestra en locales -->
+            <ul class="menuLateral" id="menuLateralLocales">
+                <div id="logoYNombreLocal">
+                    <li id="logoLocal"></li>
+                    <span id="nombreLocal"></span>
+                </div>
+                <li class="redondear" id="menuEstadoLocales"><a href="#">Estado</a></li>
+                <li class="redondear" id="menuCupoMaximoLocales"><a href="#">Cupo Máximo</a></li>
+                <li class="redondear" id="menuDisponibilidadLocales"><a href="#">Disponibilidad</a></li>
+                <li class="redondear" id="menuEstadisticaLocales"><a href="#">Estadística</a></li>
+            </ul>
+            <!-- Solo se muestra en personas -->
+            <ul class="menuLateral" id="menuLateralPersonas">
+                <div id="logoYNombrePersona">
+                    <li id="logoPersona"></li>
+                    <span id="nombrePersona"></span>
+                </div>
+                <li class="redondear" id="menuReservaPersonas"><a href="#">Reservas</a></li>
+                <li class="redondear" id="menuEstadisticaPersonas"><a href="#">Estadística</a></li>
+            </ul>
+        </nav>
+        <!-- Para arreglar flotacion CSS -->
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- LOCALES -->
+    <!-- Buscador que solo se muestra en estado de local -->
+    <div id="buscador" class="fijadorMenusArriba">
+        <input type="text" id="txtBuscador" class="redondear" placeholder="Buscar reservas">
+        <input type="button" id="btnBuscar" class="redondear" value="Buscar">
+    </div>
+    
+    <!-- Cuerpo -->
+    <section class="containerLogIn">
+        <!-- Solo se muestra al iniciar sesion de locales -->
+        <div id="divInicioSesionLocales">
+            <h1 class="textoCentrado" id="inicioSesion">Iniciar Sesión</h1>
+            <article class="login">
+                <label for="txtNombreUsuario">Nombre de usuario</label>
+                <input type="text" id="txtNombreUsuario" class="redondear">
+                <label for="txtContrasenia">Contraseña</label>
+                <input type="password" id="txtContrasenia" class="redondear">
+                <input type="button" id="btnEntrarLocales" class="redondear" value="Entrar">
+                <p class="error" id="pErroresLoginLocales"></p>
+                <!-- <p class="error" id="pErrorUsuario"></p>
+                <p class="error" id="pErrorContraseña"></p> -->
+            </article>
+        </div>
+        <!-- Solo se muestra al registrar personas -->
+        <div id="divRegistroPersonas">
+            <h1 class="textoCentrado" id="registro">Registro</h1>
+            <article id="registro">
+                <label for="txtNombrePersona">Nombre(*)</label>
+                <input type="text" id="txtNombrePersona" class="redondear">
+                <label for="txtNombreUsuarioPersonasRegistro">Nombre de usuario(*)</label>
+                <input type="text" id="txtNombreUsuarioPersonasRegistro" class="redondear">
+                <label for="txtContraseniaPersonasRegistro">Contraseña(*)</label>
+                <input type="password" id="txtContraseniaPersonasRegistro" class="redondear">
+                <p>La contraseña debe contener:</p>
+                <ul id="listaRequisitos">
+                    <li id="liSeisCaracteres">Mínimo 6 caracteres.</li>
+                    <li id="liUnaMayus">Una mayúscula.</li>
+                    <li id="liUnaMinus">Una minúscula.</li>
+                    <li id="liUnNumero">Un número.</li>
+                </ul>
+                <span id="camposObligatorios">(*)Campos obligatorios</span>
+                <input type="button" id="btnRegistrar" class="redondear" value="Registrarse">
+                <p class="error" id="pErroresRegistroPersonas"></p>
+                <span id="cuentaUsuarioInicioSesion">¿Ya tiene cuenta? <a href="#">Inicie Sesión</a></span>
+            </article>
+        </div>
+
+        <!-- Solo se muestra al iniciar sesion personas -->
+        <div id="divInicioSesionPersonas">
+            <h1 class="textoCentrado" id="inicioSesion">Iniciar Sesión</h1>
+            <article class="login">
+                <label for="nombreUsuarioPersonas">Nombre de usuario</label>
+                <input type="text" id="nombreUsuarioPersonas" class="redondear">
+                <label for="contraseniaPersonas">Contraseña</label>
+                <input type="password" id="contraseniaPersonas" class="redondear">
+                <input type="button" id="btnEntrarPersonas" class="redondear" value="Entrar">
+                <p class="error" id="pErroresLoginPersonas"></p>
+                <span id="cuentaUsuarioRegistro">¿No tiene cuenta? <a href="#">Regístrese</a></span>
+            </article>
+        </div>
+    </section>
+
+    <section class="container">
+        <!-- Estado Local -->
+        <article class="contenidoDeSeccionesConMenuArriba" id="divEstadoLocal">
+            <table id="tablaEstadoLocal"></table>
+            <p id="pMensajesEstadoLocal"></p>
+        </article>
+
+        <!-- Cupo Maximo -->
+        <article class="segundoContainer" id="divCupoMaximoLocal">
+            <p id="pCupoMaximo"></p>
+            <input type="number" id="txtCupoMaximo" class="redondear" placeholder="Ingrese el cupo máximo">
+            <input type="button" id="btnModificar" class="redondear" value="Modificar">
+            <span>Aviso: <br>
+                Recuerde que para cambiar el cupo no debe tener reservas en estado pendiente. <br>
+                Puede checkear las reservas en la pestaña Estado.</span>
+        </article>
+
+        <!-- Disponibilidad -->
+        <article class="segundoContainer" id="divDisponibilidadLocal">
+            <p id="pDisponibilidad">---</p>
+            <input type="button" id="btnHabilitar" class="redondear" value="Habilitar">
+            <input type="button" id="btnDeshabilitar" class="redondear" value="Deshabilitar">
+            <br>
+            <span>Aviso: <br>
+                Recuerde que se deshabilitará automáticamente cuando la cantidad <br>
+                de reservas totales pendientes coincida con el cupo del local. <br>
+                Para que esto no suceda, contemple la posibilidad de aumentar el <br>
+                cupo de la sección Cupo máximo.
+            </span>
+        </article>
+    </section>
+
+    <!-- Estadística Locales -->
+    <!-- Menu -->
+    <div class="fijadorMenusArriba">
+        <nav class="menuArriba" id="menuArribaEstadisticaLocales">
+            <div>
+                <ul>
+                    <li class="redondear" id="informacion"><a href="#">Información</a></li>
+                    <li class="redondear" id="listadoDeLocales"><a href="#">Listado de locales</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Cuerpo -->
+    <section class="container">
+        <article class="contenidoDeSeccionesConMenuArriba" id="divEstadisticaLocal">
+            <!-- Informacion -->
+            <div id="informacionEstadisticaLocal">
+                <table id="tablaInformacionEstadisticaLocal"></table>
+            </div>
+            <!-- Listado de locales -->
+            <div id="listadoDeLocalesEstadisticaLocal">
+                <table id="tablaListadoDeLocales"></table>
+            </div>
+        </article>
+    </section>
+
+    <!-- PERSONAS -->
+    <!-- Menu -->
+    <div class="fijadorMenusArriba">
+        <nav class="menuArriba" id="menuArribaReservasPersonas">
+            <div>
+                <ul>
+                    <li class="redondear" id="solicitarReservas"><a href="#">Solicitar reservas</a></li>
+                    <li class="redondear" id="reservasPendientes"><a href="#">Reservas pendientes</a></li>
+                    <li class="redondear" id="reservasFinalizadas"><a href="#">Reservas finalizadas</a></li>
+                </ul>       
+            </div>
+        </nav>
+    </div>
+
+    <!-- Reserva Personas -->
+    <!-- Cuerpo -->
+    <section class="container">
+        <article class="contenidoDeSeccionesConMenuArriba" id="divReservasPersonas">
+            <!-- Solicitar Reservas -->
+            <div id="solicitarReservasPersonas">
+                <select name="selectReservasPersonas" id="slcSolicitarReservaPersonas"></select>
+                <p id="pInfoLocalSeleccionado"></p>
+                <label for="cuposAReservarPersonas">Cupos a reservar</label>
+                <input type="number" id="cuposAReservarPersonas" class="redondear">
+                <input type="button" id="btnSolicitarReserva" class="redondear" value="Solicitar">
+                <p class="error" id="pErroresReservasPersonas"></p>
+            </div>
+            <!-- Reservas Pendientes -->
+            <div id="reservasPendientesPersonas">
+                <table id="tablaReservasPendientesPersonas"></table>
+            </div>
+            <!-- Reservas Finalizadas -->
+            <div id="reservasFinalizadasPersonas">
+                <table id="tablaReservasFinalizadasPersonas"></table>
+                <p id="pErrorCalificacion"></p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Estadística Personas -->
+    <!-- Menu -->
+    <div class="fijadorMenusArriba">
+        <nav class="menuArriba" id="menuArribaEstadisticasPersonas">
+            <div>
+                <ul>
+                    <li class="redondear" id="porcentajeReservas"><a href="#">Porcentaje de reservas</a></li>
+                    <li class="redondear" id="localConMasReservasCliente"><a href="#">Local con más reservas del cliente</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cuerpo -->
+    <section class="container">
+        <article class="contenidoDeSeccionesConMenuArriba" id="divEstadisticaPersonas">
+            <!-- Porcentaje de reservas -->
+            <div id="porcentajeDeReservasPersonas">
+                <table id="tablaPorcentajeReservasPersonas"></table>
+            </div>
+            <!-- Local con más reservas del cliente -->
+            <div id="localConMasReservasPersonas">
+                <table id="tablaLocalConMasReservasPersonas"></table>
+            </div>
+        </article>     
+    </section>
+
+</body>
+
+</html>

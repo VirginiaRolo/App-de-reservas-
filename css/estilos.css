@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1155px;
+    /* margin: 0 auto; */
+    /* margin-top: 90px;
+    margin-left: 285px;
+    margin-right: 100px; */
+    margin: 190px auto 0 435px;
+}
+
+.containerLogIn {
+    margin-top: 140px;
+}
+
+.contenidoDeSeccionesConMenuArriba {
+    margin-top: 190px;
+}
+
+.segundoContainer {
+    width: 600px;
+    margin: auto;
+}
+
+.tercerContainer {
+    margin: 10px 255px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.textoCentrado {
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.redondear {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.activo {
+    background-color: #00bbc9;
+}
+
+.activo2 {
+    background-color: #202022;
+}
+
+header {
+    padding: 0 20px;
+}
+header, div.sidebar {
+    /* height: 50px;  */
+
+    background-color: #00747c;
+}
+
+header nav a img {
+    /* display: block; */
+    float: left;
+    width: 180px;
+    /* margin: 0 auto; */
+    padding: 10px 0;
+}
+
+header nav ul {
+    float: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 25px 30px;
+    transition: background-color .30s ease-in;
+}
+
+nav ul li.redondear {
+    display: inline-block;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+nav.menuArriba ul li a {
+    color: #202022;
+}
+
+/* nav.menuArriba ul li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+nav.menuArriba ul li:hover a {
+    color: white;
+}
+
+nav.menuArriba ul li.activo2 a{
+    color: white;
+}
+
+input[type=button] {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+header nav ul li a#cerrarSesion {
+    padding: 0;
+}
+
+header nav ul li a#cerrarSesion img {
+    width: 40px;
+}
+
+div.sidebar {
+    width: 220px;
+    height: 100%;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+div.sidebar nav ul.menuLateral {
+    /* margin-top: 125px; */
+    text-align: center;
+}
+
+div.sidebar nav ul.menuLateral li {
+    width: 100%;
+    padding: 25px 0;
+    font-size: 20px;
+}
+
+div.sidebar nav ul.menuLateral li a {
+    text-align: center;
+    display: inline;
+    /* padding: 50px 0; */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+h1#inicioSesion {
+    margin: 60px 0 25px 0;
+}
+
+h1#registro {
+    margin: 30px 0 20px 0;
+}
+
+span {
+    display: block;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("../img/dropdownmenu.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none;
+    word-wrap: normal;
+    text-transform: none;
+}
+
+select::after, select::before {
+    box-sizing: border-box;
+}
+
+select option::before, select option::after {
+    box-sizing: border-box;
+}
+
+section article.login, section article#registro {
+    width: 400px;
+    margin: 0 auto;
+}
+
+section article.login label, section article#registro label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+section article.login input, section article#registro input, div#buscador input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    height: 35px;
+}
+
+input[type=text], input[type=password], input[type=number], section article.login input[type=text], section article#registro input[type=text],
+section article.login input[type=password], section article#registro input[type=password] {
+    width: 380px;
+    color: #495057;
+    /* color: #878787; */
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, section article.login input[type=text]:focus, section article#registro input[type=text]:focus,
+section article.login input[type=password]:focus, section article#registro input[type=password]:focus, select:focus {
+    color: #495057;
+    /* color: #878787; */
+    background-color: white;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / .25);
+}
+
+input[type=button], section article.login input[type=button], section article#registro input[type=button], div#buscador input[type=button] {
+    height: 45px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    border-color: transparent;
+    background-color: #0071c2;
+    transition: background-color .20s ease-in-out;
+}
+
+section.container article.segundoContainer input[type=number] {
+    height: 30px;
+    padding: 5px 10px;
+    margin-right: 25px;
+}
+
+section.container article.segundoContainer input[type=button] {
+    padding: 5px 10px;
+}
+/* 
+section.container article.segundoContainer span {
+    margin-top: ;
+} */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+table#tablaLocalConMasReservasPersonas {
+    width: 40%;
+    margin: auto;
+}
+
+/* thead {
+    vertical-align: middle;
+    border-color: inherit;
+} */
+
+thead::after, thead::before {
+    box-sizing: border-box;
+}
+
+th {
+    text-align: inherit;
+}
+
+table td, table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+tbody::after, tbody::before {
+    box-sizing: border-box;
+}
+
+table input[type=button] {
+    height: 40px;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 700;
+    border-color: transparent;
+    background-color: #0071c2;
+    transition: background-color .20s ease-in-out;
+}
+
+table input[type=button]:hover {
+    cursor: pointer;
+    background-color: #004e85;
+}
+
+table img {
+    width: 300px;
+}
+
+section article#registro input[type=button]#btnRegistrar {
+    margin-top: 15px;
+}
+
+section article.login input[type=button]:hover, section article#registro input[type=button]:hover, div#buscador input[type=button]:hover {
+    cursor: pointer;
+    background-color: #004e85;
+}
+
+section article.login p, section article#registro p {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+section article.login p, section article#registro p, section article#registro ul,
+section article#registro span#camposObligatorios, section.container article.segundoContainer span {
+    color: #878787;
+}
+
+section article#registro ul {
+    font-size: 12px;
+    list-style-position: inside;
+}
+
+section article.login span, section article#registro span, section.container article.segundoContainer span {
+    display: block;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+section article#registro span#camposObligatorios {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+section article.login span#cuentaUsuarioRegistro, section article#registro span#cuentaUsuarioInicioSesion {
+    text-align: center;
+}
+
+/* Para hacer las líneas al lado de ¿Ya tiene cuenta? */
+section article.login span#cuentaUsuarioRegistro:before, section article#registro span#cuentaUsuarioInicioSesion:before,
+section article.login span#cuentaUsuarioRegistro:after, section article#registro span#cuentaUsuarioInicioSesion:after {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid #878787;
+}
+
+section article.login span#cuentaUsuarioRegistro:after, section article#registro span#cuentaUsuarioInicioSesion:after {
+    margin: 0 -55% 0 .5em;
+}
+
+section article.login span#cuentaUsuarioRegistro a, section article#registro span#cuentaUsuarioInicioSesion a {
+    font-weight: 500;
+    color: #0071c2;
+}
+
+/* article nav {
+    background-color: #cacaca
+} */
+
+#cuposAReservarPersonas {
+    width: 300px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+div#buscador {
+    position: fixed;
+}
+
+div#buscador, nav.menuArriba {
+    background-color: #cacaca;
+    text-align: center;
+    padding: 15px 100px;
+    /* margin-left: 215px; */
+    /* margin-bottom: 300px; */
+}
+nav.menuArriba {
+    /* text-align: left; */
+    margin-left: 105px;
+    padding: 10px 0;
+    /* margin-bottom: 300px; */
+}
+
+nav.menuArriba div.contenidoDeSeccionesConMenuArriba ul li {
+    color: #202022;
+    transition: all .20s ease-in-out;
+}
+
+nav.menuArriba div.contenidoDeSeccionesConMenuArriba ul li:hover {
+    color: white;
+    background-color: #202022;
+}
+
+/* nav.menuArriba ul li a{
+    color: #202022;
+} */
+
+/* nav.menuArriba ul li a:hover {
+    color: white;
+} */
+
+article div input[type=button] {
+    padding: 5px 10px;
+    height: 37px;
+}
+
+#fijadorMenuPrincipal {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.fijadorMenusArriba {
+    width: 100%;
+    top: 63px;
+    left: 0;
+    position: fixed;
+}
+
+#btnHabilitar {
+    background-color: #28a745;
+}
+
+#btnDeshabilitar {
+    background-color: #dc3545;
+}
+
+#imgLogOut, #logoLocal, #logoPersona, #logoLocal {
+    padding-top: 0;
+    transition: none;
+}
+
+#imgLogOut:hover, #logoLocal:hover, #logoPersona:hover {
+    padding-top: 0;
+    transition: none;
+    background-color: #00747c;
+}
+
+#logoLocal:hover, #logoPersona:hover {
+    cursor: auto;
+}
+
+div nav ul#menuLateralPersonas div#logoYNombrePersona li#logoPersona, div nav ul#menuLateralLocales div#logoYNombreLocal li#logoLocal {
+    padding-bottom: 5px;
+}
+
+div nav ul#menuLateralPersonas span#nombrePersona, div nav ul#menuLateralLocales span#nombreLocal {
+    display: block;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#logoYNombreLocal, #logoYNombrePersona {
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+
+#logoPersona img, #logoLocal img{
+    /* width: 70px; */
+    width: 130px;
+    margin: auto;
+}
+
+div#buscador input {
+    display: inline-block;
+    
+    /* margin: 0 auto; */
+}
+
+div#buscador input[type=button] {
+    width: 100px;
+    margin-top: 0;
+    transition: background-color .20s ease-in-out;
+}
+
+div#buscador input[type=text] {
+    width: 300px;
+    color: #495057;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-right: 30px;
+    padding: 5px 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+div#buscador input[type=text]:focus {
+    color: #495057;
+    /* color: #878787; */
+    background-color: white;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / .25);
+}
